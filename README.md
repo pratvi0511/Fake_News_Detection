@@ -134,10 +134,10 @@ Just this and you are good to go
 We also made a GUI in the form of the website for the detector. The Backend is made using Flask, whereas the frontend is normal HTML and CSS.
 
 ### Fake News Detector
-![Fake-News-Detector](./demo_assets/fakenews.JPG)
+![Fake-News-Detector](./demo_assets/fakenews.jpg)
 
 ### Clickbait Detector
-![Clickbait-Detector](./demo_assets/clickbait.JPG)
+![Clickbait-Detector](./demo_assets/clickbait.jpg)
 
 ### Short Demo (Please Give it sometime to Load 😃)
 ![Demo_Video](./demo_assets/demo.gif)
