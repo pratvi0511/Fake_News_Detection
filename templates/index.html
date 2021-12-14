@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeNewsDetector</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'styles/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'styles/navbar.css')  }}">
+    <style>
+        body{
+            background-image: url("{{url_for('static', filename='pic.jpg')}}")
+        }
+        
+    </style>
+
+</head>
+
+
+<body>
+{% include 'navbar.html' %}
+<h1 class="heading">Fake News Predictor</h1>
+{% for message in form.title.errors %}
+    <div class="alert alert-primary" role="alert">{{ message }}</div>
+{% endfor %}
+{% for message in form.articletext.errors %}
+    <div class="alert alert-primary" role="alert">{{ message }}</div>
+{% endfor %}
+<div class="login-box">
+    <form method="POST" class="form-control">
+        <div class="mb-3 user-box">
+            <input type="input" class="form-control" name="title" id="title">
+            <label for="title" class="form-label styling">Enter the title of Article</label>
+        </div>
+        <div class="mb-3 user-box">
+            <input type="input" name="articletext" class="form-control" id="articletext">
+            <label for="articletext" class="form-label styling">Enter the text of Article</label>
+        </div>
+        <button type="submit" class="btn btn-primary"><span></span>
+            <span></span>
+            <span></span>
+            <span></span>Submit
+        </button>
+    </form>
+</div>
+
+</body>
+
+</html>
